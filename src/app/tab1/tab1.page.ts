@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class Tab1Page implements OnInit {
   public selectedTema: string = "";
   public audio: HTMLAudioElement = new Audio();
 
-  constructor() { }
+  constructor(private auth: AuthService) { }
   ngOnInit(): void {
 
   }
@@ -30,6 +31,15 @@ export class Tab1Page implements OnInit {
     this.audio.pause();
     this.audio = new Audio(`assets/audios/${select}_${this.selectedIdioma}.mp3`);
     this.audio.play()
+  }
+
+
+
+  logOut() {
+    setTimeout(() => {
+
+      this.auth.logout();
+    }, 3000);
   }
 
 }
