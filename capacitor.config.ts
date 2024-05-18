@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'Revelamiento Visual',
+  appId: 'pps.tab.din',
+  appName: 'Tabla Dinámica',
   webDir: 'www',
   server: {
     androidScheme: 'https'
@@ -14,7 +14,7 @@ const config: CapacitorConfig = {
       launchFadeOutDuration: 3000,
       backgroundColor: "#ffffffff",
       androidSplashResourceName: "splash",
-      androidScaleType: "CENTER_CROP",
+      androidScaleType: "CENTER",
       showSpinner: true,
       androidSpinnerStyle: "large",
       iosSpinnerStyle: "small",

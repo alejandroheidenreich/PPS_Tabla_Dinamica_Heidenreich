@@ -17,7 +17,7 @@ export class LogPage implements OnInit {
   ngOnInit() {
   }
 
-
+  public selected: number = 0;
   public register: boolean = false;
   public user!: User;
   public form: FormGroup = this.fb.group({
@@ -31,6 +31,7 @@ export class LogPage implements OnInit {
   onSubmit() {
     this.user =
     {
+      id: '',
       email: this.form.controls['email'].value,
       password: this.form.controls['password'].value,
     }
@@ -88,16 +89,19 @@ export class LogPage implements OnInit {
     this.register = false;
     this.form.controls['email'].setValue('account1@test.com');
     this.form.controls['password'].setValue('123123');
+    this.selected = 1;
   }
 
   logAccount2() {
     this.register = false;
     this.form.controls['email'].setValue('account2@test.com');
     this.form.controls['password'].setValue('123123');
+    this.selected = 2;
   }
   logAccount3() {
     this.register = false;
     this.form.controls['email'].setValue('account3@test.com');
     this.form.controls['password'].setValue('123123');
+    this.selected = 3;
   }
 }
